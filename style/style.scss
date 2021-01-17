@@ -1,0 +1,157 @@
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+
+html,body{
+  min-height: 667px;
+}
+
+
+
+header{
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+
+  .top-title{
+    width: 100%;
+    
+    background-color: $gray-700;
+
+    font-family: 'Google Sans';
+    text-align: center;
+  }
+
+  .tabs{
+    padding: 5px;
+    background-color: $gray-800;
+  }
+}
+
+.content{
+  display: flex;
+  min-height: 595px;
+  #mainText{
+    width: 100%;
+    height: inherit;
+    margin: 0px;
+    resize: none;
+
+    outline: none;
+    border: none;
+
+    font-size: 20px;
+  }
+}
+
+footer{
+  display: flex;
+
+  align-items: center;
+  bottom: 0px;
+  height: 48px;
+
+  background-color: black;
+
+  font-family: 'Google Sans';
+
+  .dark-mode-switch{
+    margin-left: 10px;
+  }
+
+  .lang{
+    display: flex;
+    input, .btn{
+      font-size: 12px;
+    }
+    
+    .input{
+      font-weight: bold;
+    }
+  }
+
+  .download{
+    input{
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    display: flex;
+  }
+
+  .dark-mode-switch, .lang, .download{
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-height: 667px){
+  html, body{
+    overflow: hidden;
+  }
+}
+
+.bengali{
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+.english{
+  font-family: 'Inter', sans-serif;
+}
+
+.tamil{
+  font-family: 'Mukta Malar', sans-serif;
+}
+
+.devnagari{
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.japanese{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.korean{
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.hebrew{
+  font-family: 'Rubik', sans-serif;
+  text-align: right;
+}
+
+.arabic{
+  font-family: 'Tajawal', sans-serif;
+  text-align: right;
+}
+
+.popup{
+  display: none;
+  position: absolute;
+
+  top: 50px;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+
+  width: 500px;
+
+  padding: 10px;
+
+  background-color: #9c9c9c5e;
+
+  border-radius: 8px;
+
+  h3{
+    text-align: center;
+    font-family: 'Google Sans';
+  }
+  p{
+    text-align: justify;
+    font-family: 'Inter';
+  }
+
+  .exitbtn{
+    text-align: right;
+  }
+}
