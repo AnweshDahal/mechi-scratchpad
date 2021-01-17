@@ -19,10 +19,20 @@ function actionPerformed(){
     closePopup();
   });
 
-  document.querySelector("#themeSwitch").addEventListener('change', (e) => {
+  document.querySelector('#themeSwitch').addEventListener('change', (e) => {
     e.preventDefault();
     toggleTheme();
   });
+
+  document.querySelector('#fontRange').addEventListener('change', (e) => {
+    e.preventDefault();
+    changeFontSize();
+  });
+}
+
+function changeFontSize(){
+  let size = document.querySelector('#fontRange').value;
+  document.querySelector('#mainText').style.fontSize = size;
 }
 
 function toggleTheme(){
@@ -35,31 +45,34 @@ function closePopup(){
 }
 
 function changeLanguage(lang) {
+  console.log(lang);
   if (lang === 'en'){
-    document.querySelector('#mainText').className = "english";
-    document.querySelector('#mainText').placeholder = "Write Something";
+    changeTALanguage('english', 'Write Something');
   } else if (lang === 'dv'){
-    document.querySelector('#mainText').className = "devnagari";
-    document.querySelector('#mainText').placeholder = "केहि लेख्नुहोस/ कुछ लिखो";
+    changeTALanguage('devnagari', 'केहि लेख्नुहोस/ कुछ लिखो');
   } else if (lang === 'ab'){
-    document.querySelector('#mainText').className = "arabic";
-    document.querySelector('#mainText').placeholder = "أكتب شيئا";
+    changeTALanguage('arabic', 'أكتب شيئا')
   } else if (lang === 'jp'){
-    document.querySelector('#mainText').className = "japanese";
-    document.querySelector('#mainText').placeholder = "何かを書く";
+    changeTALanguage('japanese', '何かを書く');
   } else if (lang === 'kr'){
-    document.querySelector('#mainText').className = "korean";
-    document.querySelector('#mainText').placeholder = "뭔가 쓰기";
+    changeTALanguage('korean', '뭔가 쓰기');
   } else if (lang === 'bg'){
-    document.querySelector('#mainText').className = "bengali";
-    document.querySelector('#mainText').placeholder = "কিছু লিখুন";
+    changeTALanguage('bengali', 'কিছু লিখুন');
   } else if (lang === 'hb'){
-    document.querySelector('#mainText').className = "hebrew";
-    document.querySelector('#mainText').placeholder = "לכתוב משהו";
+    changeTALanguage('hebrew', 'לכתוב משהו');
   } else if (lang === 'tm'){
-    document.querySelector('#mainText').className = "tamil";
-    document.querySelector('#mainText').placeholder = "ஏதாவது எழுத";
+    changeTALanguage('tamil', 'ஏதாவது எழுத');
   }
+}
+
+function changeTALanguage(language, placeholder){
+  console.log(document.querySelector('#mainText').classList.contains('dark-mode'));
+  if(document.querySelector('#mainText').classList.contains('dark-mode')){
+    document.querySelector('#mainText').className = `${language} dark-mode`;
+  } else {
+    document.querySelector('#mainText').className = language;
+  }
+  document.querySelector('#mainText').placeholder = placeholder;
 }
 
 function clear(){
