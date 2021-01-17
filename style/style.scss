@@ -81,8 +81,16 @@ footer{
     display: flex;
   }
 
-  .dark-mode-switch, .lang, .download, .clear{
+  .dark-mode-switch, .lang, .download, .clear, .size{
     margin-right: 10px;
+  }
+
+  .code-link{
+    a{
+      color: $white;
+      text-decoration: none;
+      font-family: 'Inter';
+    }
   }
 }
 
