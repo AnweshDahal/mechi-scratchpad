@@ -64,6 +64,8 @@ function changeLanguage(lang) {
     changeTALanguage('tamil', 'ஏதாவது எழுத');
   } else if (lang === 'ru'){
     changeTALanguage('english', 'Напиши что-нибудь')
+  } else if(lang === 'gk'){
+    changeTALanguage('english', 'Γράψε κάτι')
   }
 }
 
