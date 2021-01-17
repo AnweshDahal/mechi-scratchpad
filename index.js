@@ -18,6 +18,15 @@ function actionPerformed(){
     e.preventDefault();
     closePopup();
   });
+
+  document.querySelector("#themeSwitch").addEventListener('change', (e) => {
+    e.preventDefault();
+    toggleTheme();
+  });
+}
+
+function toggleTheme(){
+  document.querySelector("#mainText").classList.toggle("dark-mode");
 }
 
 function closePopup(){

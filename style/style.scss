@@ -17,7 +17,7 @@ header{
   .top-title{
     width: 100%;
     
-    background-color: $gray-700;
+    background-color: $red-500;
 
     font-family: 'Google Sans';
     text-align: center;
@@ -42,6 +42,8 @@ header{
     border: none;
 
     font-size: 20px;
+
+    transition: background-color 0.25s ease-in-out;
   }
 }
 
@@ -125,10 +127,9 @@ footer{
 }
 
 .popup{
-  display: none;
   position: absolute;
 
-  top: 50px;
+  top: 10px;
   left: 0;
   right: 0;
 
@@ -142,6 +143,9 @@ footer{
 
   border-radius: 8px;
 
+  backdrop-filter: blur(3px);
+  box-shadow: 0px 2px 16px $gray-600;
+
   h3{
     text-align: center;
     font-family: 'Google Sans';
@@ -154,4 +158,9 @@ footer{
   .exitbtn{
     text-align: right;
   }
+}
+
+.dark-mode{
+  background-color: #292929;
+  color: $white;
 }
