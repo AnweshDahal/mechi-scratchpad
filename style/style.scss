@@ -1,172 +1,178 @@
-@import '../node_modules/bootstrap/scss/functions';
-@import '../node_modules/bootstrap/scss/variables';
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
 
-html,body{
-  min-height: 667px;
+html,
+body {
+	min-height: 667px;
 }
 
+header {
+	display: flex;
+	flex-direction: column;
 
+	width: 100%;
 
-header{
-  display: flex;
-  flex-direction: column;
+	.top-title {
+		width: 100%;
 
-  width: 100%;
+		background-color: $red-500;
 
+		font-family: "Google Sans";
+		text-align: center;
+	}
 
-  .top-title{
-    width: 100%;
-    
-    background-color: $red-500;
-
-    font-family: 'Google Sans';
-    text-align: center;
-  }
-
-  .tabs{
-    padding: 5px;
-    background-color: $gray-800;
-  }
+	.tabs {
+		padding: 5px;
+		background-color: $gray-800;
+	}
 }
 
-.content{
-  display: flex;
-  min-height: 595px;
-  #mainText{
-    width: 100%;
-    height: inherit;
-    margin: 0px;
-    resize: none;
+.content {
+	display: flex;
+	min-height: 595px;
+	#mainText {
+		width: 100%;
+		height: inherit;
+		margin: 0px;
+		resize: none;
 
-    outline: none;
-    border: none;
+		outline: none;
+		border: none;
 
-    font-size: 20px;
+		font-size: 20px;
 
-    transition: background-color 0.25s ease-in-out;
-  }
+		transition: background-color 0.25s ease-in-out;
+	}
 }
 
-footer{
-  display: flex;
+footer {
+	display: flex;
 
-  align-items: center;
-  bottom: 0px;
-  height: 48px;
+	align-items: center;
+	bottom: 0px;
+	height: 48px;
 
-  background-color: black;
+	background-color: black;
 
-  font-family: 'Google Sans';
+	font-family: "Google Sans";
 
-  .dark-mode-switch{
-    margin-left: 10px;
-  }
+	.dark-mode-switch {
+		margin-left: 10px;
+	}
 
-  .lang{
-    display: flex;
-    input, .btn{
-      font-size: 12px;
-    }
-    
-    .input{
-      font-weight: bold;
-    }
-  }
+	.lang {
+		display: flex;
+		input,
+		.btn {
+			font-size: 12px;
+		}
 
-  .download{
-    input{
-      font-weight: bold;
-      margin-right: 10px;
-    }
-    display: flex;
-  }
+		.input {
+			font-weight: bold;
+		}
+	}
 
-  .dark-mode-switch, .lang, .download, .clear, .size{
-    margin-right: 10px;
-  }
+	.download {
+		input {
+			font-weight: bold;
+			margin-right: 10px;
+		}
+		display: flex;
+	}
 
-  .code-link{
-    a{
-      color: $white;
-      text-decoration: none;
-      font-family: 'Inter';
-    }
-  }
+	.dark-mode-switch,
+	.lang,
+	.download,
+	.clear,
+	.size {
+		margin-right: 10px;
+	}
+
+	.code-link {
+		a {
+			color: $white;
+			text-decoration: none;
+			font-family: "Inter";
+		}
+	}
 }
 
-@media screen and (max-height: 667px){
-  html, body{
-    overflow: hidden;
-  }
+@media screen and (max-height: 667px) {
+	html,
+	body {
+		overflow: hidden;
+	}
 }
 
-.bengali{
-  font-family: 'Hind Siliguri', sans-serif;
+.bengali {
+	font-family: "Hind Siliguri", sans-serif;
 }
 
-.english{
-  font-family: 'Inter', sans-serif;
+.english {
+	font-family: "Inter", sans-serif;
 }
 
-.tamil{
-  font-family: 'Mukta Malar', sans-serif;
+.tamil {
+	font-family: "Mukta Malar", sans-serif;
 }
 
-.devnagari{
-  font-family: 'Noto Sans', sans-serif;
+.devnagari {
+	font-family: "Noto Sans", sans-serif;
 }
 
-.japanese{
-  font-family: 'Noto Sans JP', sans-serif;
+.japanese {
+	font-family: "Noto Sans JP", sans-serif;
 }
 
-.korean{
-  font-family: 'Noto Sans KR', sans-serif;
+.korean {
+	font-family: "Noto Sans KR", sans-serif;
 }
 
-.hebrew{
-  font-family: 'Rubik', sans-serif;
+.hebrew {
+	font-family: "Rubik", sans-serif;
+	text-align: right;
 }
 
-.arabic{
-  font-family: 'Tajawal', sans-serif;
+.arabic {
+	font-family: "Tajawal", sans-serif;
+	text-align: right;
 }
 
-.popup{
-  position: absolute;
+.popup {
+	position: absolute;
 
-  top: 10px;
-  left: 0;
-  right: 0;
+	top: 10px;
+	left: 0;
+	right: 0;
 
-  margin: auto;
+	margin: auto;
 
-  width: 500px;
+	width: 500px;
 
-  padding: 10px;
+	padding: 10px;
 
-  background-color: #9c9c9c5e;
+	background-color: #9c9c9c5e;
 
-  border-radius: 8px;
+	border-radius: 8px;
 
-  backdrop-filter: blur(3px);
-  box-shadow: 0px 2px 16px $gray-600;
+	backdrop-filter: blur(3px);
+	box-shadow: 0px 2px 16px $gray-600;
 
-  h3{
-    text-align: center;
-    font-family: 'Google Sans';
-  }
-  p{
-    text-align: justify;
-    font-family: 'Inter';
-  }
+	h3 {
+		text-align: center;
+		font-family: "Google Sans";
+	}
+	p {
+		text-align: justify;
+		font-family: "Inter";
+	}
 
-  .exitbtn{
-    text-align: right;
-  }
+	.exitbtn {
+		text-align: right;
+	}
 }
 
-.dark-mode{
-  background-color: #292929;
-  color: $white;
+.dark-mode {
+	background-color: #292929;
+	color: $white;
 }
