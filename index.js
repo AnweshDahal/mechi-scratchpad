@@ -58,8 +58,6 @@ function changeLanguage(lang) {
     changeTALanguage('korean', '뭔가 쓰기');
   } else if (lang === 'bg'){
     changeTALanguage('bengali', 'কিছু লিখুন');
-  } else if (lang === 'hb'){
-    changeTALanguage('hebrew', 'לכתוב משהו');
   } else if (lang === 'tm'){
     changeTALanguage('tamil', 'ஏதாவது எழுத');
   } else if (lang === 'ru'){
